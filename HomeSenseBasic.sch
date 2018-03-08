@@ -2429,7 +2429,6 @@ We want bragging rights that we helped (in a very small part) to create your 8th
 <part name="R4" library="freetronics-jon" deviceset="RESISTOR" device="0603" value="10K"/>
 <part name="GND5" library="freetronics-original" deviceset="GND" device=""/>
 <part name="C1" library="freetronics-jon" deviceset="CAP" device="0805" value="10uF"/>
-<part name="GND6" library="freetronics-original" deviceset="GND" device=""/>
 <part name="IC4" library="freetronics-jon" deviceset="DHT12" device="FLAT" value="DHT12"/>
 <part name="IC3" library="freetronics-jon" deviceset="MS5637" device="02BA03"/>
 <part name="GND7" library="freetronics-original" deviceset="GND" device=""/>
@@ -2440,39 +2439,42 @@ We want bragging rights that we helped (in a very small part) to create your 8th
 <part name="LED1" library="freetronics-jon" deviceset="LED" device="0603" value="RED"/>
 <part name="R9" library="freetronics-jon" deviceset="RESISTOR" device="0603" value="1K"/>
 <part name="C2" library="freetronics-jon" deviceset="CAP" device="0805" value="10uF"/>
-<part name="R10" library="freetronics-jon" deviceset="RESISTOR" device="0603" value="1K"/>
-<part name="LED2" library="freetronics-jon" deviceset="LED" device="0603" value="GREEN"/>
+<part name="R7" library="freetronics-jon" deviceset="RESISTOR" device="0603" value="1K"/>
+<part name="LED3" library="freetronics-jon" deviceset="LED" device="0603" value="GREEN"/>
 <part name="GND11" library="freetronics-original" deviceset="GND" device=""/>
 <part name="JP1" library="freetronics-jon" deviceset="M02" device="PTH"/>
 <part name="JP2" library="freetronics-jon" deviceset="M04" device="PTH"/>
-<part name="S2" library="freetronics-jon" deviceset="TAC_SWITCH_2PIN" device="SMT" value="FLASH"/>
+<part name="S2" library="freetronics-jon" deviceset="TAC_SWITCH_2PIN" device="SMT" value="PROGRAM"/>
 <part name="P+1" library="freetronics-jon" deviceset="3.3V" device=""/>
 <part name="GND1" library="freetronics-original" deviceset="GND" device=""/>
 <part name="U$1" library="freetronics-jon" deviceset="K78XX-500R3" device="" value="K7803-500R3"/>
 <part name="GND2" library="freetronics-original" deviceset="GND" device=""/>
 <part name="C3" library="freetronics-jon" deviceset="CAP" device="0603" value="100nF"/>
+<part name="R8" library="freetronics-jon" deviceset="RESISTOR" device="0603" value="4K7"/>
+<part name="LED4" library="freetronics-jon" deviceset="LED" device="0603" value="BLUE"/>
+<part name="GND9" library="freetronics-original" deviceset="GND" device=""/>
+<part name="R10" library="freetronics-jon" deviceset="RESISTOR" device="0603" value="1K"/>
+<part name="LED2" library="freetronics-jon" deviceset="LED" device="0603" value="GREEN"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="149.86" y="12.7" size="3.048" layer="94">HomeSense WiFi Environmental Sensor</text>
-<text x="215.9" y="6.858" size="1.778" layer="94">V1.0 (2017-11-10)</text>
+<text x="215.9" y="6.858" size="1.778" layer="94">V1.0 (2018-03-08)</text>
 <text x="149.606" y="6.858" size="1.778" layer="94">www.superhouse.tv/homesense</text>
 <frame x1="0" y1="0" x2="248.92" y2="185.42" columns="8" rows="5" layer="94"/>
 <frame x1="147.32" y1="5.08" x2="243.84" y2="17.78" columns="0" rows="0" layer="94" border-left="no" border-top="no" border-right="no" border-bottom="no"/>
 <frame x1="147.32" y1="5.08" x2="213.36" y2="10.16" columns="8" rows="5" layer="94"/>
 <frame x1="213.36" y1="5.08" x2="243.84" y2="10.16" columns="8" rows="5" layer="94"/>
-<text x="114.3" y="7.62" size="1.778" layer="97">Released under the TAPR
-Open Hardware License:
-tapr.org/OHL</text>
-<text x="76.2" y="7.62" size="1.778" layer="97">GPIO0: Bias HIGH
+<text x="10.16" y="5.08" size="1.778" layer="97">Released under the TAPR Open Hardware License: tapr.org/OHL</text>
+<text x="10.16" y="10.16" size="1.778" layer="97">GPIO0: Bias HIGH
 GPIO2: Bias HIGH
 GPIO15: Bias LOW
 CH_PD: Bias HIGH
 
 GPIO16: Status LED
 
-From D1 Mini: (use this, I think)
+From D1 Mini profile for Arduino:
 GPIO4: D2 SDA
 GPIO5: D1 SCL
 
@@ -2483,12 +2485,14 @@ GPIO14: SCL
 From Tasmota:
 GPIO4: SDA
 GPIO14: SCL</text>
-<text x="149.86" y="20.32" size="1.778" layer="97">I2C addresses
+<text x="203.2" y="157.48" size="1.778" layer="97">I2C addresses
 0x5C: DHT12 temp / humidity
-0x76: MS5637 baro sensor (BARO says 0xED!)</text>
-<text x="7.62" y="7.62" size="1.9304" layer="94">Barometric Pressure Sensor: MS5637-02BA03
+0x76: MS5637 baro sensor</text>
+<text x="53.34" y="10.16" size="1.9304" layer="97">Barometric Pressure Sensor: MS5637-02BA03
 Pressure range: 1kpa to 200kpa (0.145psi to 29psi)
 Temperature range: -40C to +85C
+Temperature resolution: 0.01C
+Temperature accuracy: +/- 1C
 I2C address: 0xED
 
 Humidity / Temperature Sensor: DHT12
@@ -2499,14 +2503,24 @@ Temperature range: -20 to +60C
 Temperature resolution: 0.1C
 Temperature precision: +/- 0.5C
 I2C address: 0x5C</text>
-<text x="116.84" y="68.58" size="1.778" layer="97">3.3V</text>
-<text x="116.84" y="66.04" size="1.778" layer="97">RX</text>
-<text x="116.84" y="63.5" size="1.778" layer="97">TX</text>
-<text x="116.84" y="60.96" size="1.778" layer="97">GND</text>
-<text x="15.24" y="160.02" size="1.778" layer="97">Power Input
+<text x="134.62" y="58.42" size="1.778" layer="97">3.3V</text>
+<text x="134.62" y="55.88" size="1.778" layer="97">RX</text>
+<text x="134.62" y="53.34" size="1.778" layer="97">TX</text>
+<text x="134.62" y="50.8" size="1.778" layer="97">GND</text>
+<text x="12.7" y="160.02" size="1.778" layer="97">Power Input
 5-20Vdc</text>
-<text x="10.16" y="152.4" size="3.81" layer="97">+</text>
-<text x="10.16" y="147.32" size="3.81" layer="97">-</text>
+<text x="7.62" y="152.4" size="3.81" layer="97">+</text>
+<text x="7.62" y="147.32" size="3.81" layer="97">-</text>
+<text x="45.72" y="71.12" size="1.778" layer="97">Note: Only fit one of LED2/R10
+or LED3/R7, not both. LED2 is
+on the top of the PCB, LED3 is
+on the bottom. Place at LED2
+position by default. The LED3
+position can be used if the LED
+must be externally visible, by
+drilling a hole through the case.</text>
+<text x="137.16" y="63.5" size="1.778" layer="97">Programming
+Header</text>
 </plain>
 <instances>
 <instance part="IC1" gate="G$1" x="114.3" y="106.68"/>
@@ -2514,13 +2528,12 @@ I2C address: 0x5C</text>
 <instance part="GND3" gate="1" x="109.22" y="121.92"/>
 <instance part="GND4" gate="1" x="134.62" y="91.44"/>
 <instance part="R1" gate="G$1" x="93.98" y="134.62" rot="R90"/>
-<instance part="P+2" gate="G$1" x="53.34" y="154.94"/>
+<instance part="P+2" gate="G$1" x="50.8" y="154.94"/>
 <instance part="R2" gate="G$1" x="86.36" y="134.62" rot="R90"/>
 <instance part="R3" gate="G$1" x="144.78" y="134.62" rot="R90"/>
 <instance part="R4" gate="G$1" x="144.78" y="91.44" rot="R90"/>
 <instance part="GND5" gate="1" x="144.78" y="81.28"/>
-<instance part="C1" gate="G$1" x="53.34" y="132.08"/>
-<instance part="GND6" gate="1" x="53.34" y="119.38"/>
+<instance part="C1" gate="G$1" x="50.8" y="132.08"/>
 <instance part="IC4" gate="G$1" x="226.06" y="93.98"/>
 <instance part="IC3" gate="G$1" x="220.98" y="127"/>
 <instance part="GND7" gate="1" x="228.6" y="78.74"/>
@@ -2530,18 +2543,23 @@ I2C address: 0x5C</text>
 <instance part="R6" gate="G$1" x="182.88" y="134.62" rot="R90"/>
 <instance part="LED1" gate="G$1" x="137.16" y="147.32"/>
 <instance part="R9" gate="G$1" x="137.16" y="134.62" rot="R90"/>
-<instance part="C2" gate="G$1" x="33.02" y="132.08"/>
-<instance part="R10" gate="G$1" x="63.5" y="99.06" rot="R90"/>
-<instance part="LED2" gate="G$1" x="63.5" y="88.9"/>
-<instance part="GND11" gate="1" x="63.5" y="81.28"/>
-<instance part="JP1" gate="G$1" x="17.78" y="149.86"/>
-<instance part="JP2" gate="G$1" x="129.54" y="66.04" rot="MR180"/>
+<instance part="C2" gate="G$1" x="30.48" y="132.08"/>
+<instance part="R7" gate="G$1" x="35.56" y="99.06" rot="R90"/>
+<instance part="LED3" gate="G$1" x="35.56" y="88.9"/>
+<instance part="GND11" gate="1" x="25.4" y="78.74"/>
+<instance part="JP1" gate="G$1" x="15.24" y="149.86"/>
+<instance part="JP2" gate="G$1" x="147.32" y="55.88" rot="MR180"/>
 <instance part="S2" gate="1" x="127" y="127"/>
-<instance part="P+1" gate="G$1" x="137.16" y="71.12"/>
-<instance part="GND1" gate="1" x="137.16" y="55.88"/>
-<instance part="U$1" gate="G$1" x="43.18" y="152.4"/>
+<instance part="P+1" gate="G$1" x="154.94" y="60.96"/>
+<instance part="GND1" gate="1" x="154.94" y="45.72"/>
+<instance part="U$1" gate="G$1" x="40.64" y="152.4"/>
 <instance part="GND2" gate="1" x="119.38" y="121.92"/>
 <instance part="C3" gate="G$1" x="236.22" y="142.24"/>
+<instance part="R8" gate="G$1" x="60.96" y="144.78" rot="R90"/>
+<instance part="LED4" gate="G$1" x="60.96" y="132.08"/>
+<instance part="GND9" gate="1" x="60.96" y="119.38"/>
+<instance part="R10" gate="G$1" x="25.4" y="99.06" rot="R90"/>
+<instance part="LED2" gate="G$1" x="25.4" y="88.9"/>
 </instances>
 <busses>
 </busses>
@@ -2580,31 +2598,40 @@ I2C address: 0x5C</text>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="33.02" y1="129.54" x2="33.02" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="129.54" x2="30.48" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="1"/>
-<wire x1="25.4" y1="149.86" x2="25.4" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="124.46" x2="33.02" y2="124.46" width="0.1524" layer="91"/>
-<junction x="33.02" y="124.46"/>
-<wire x1="43.18" y1="144.78" x2="43.18" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="124.46" x2="43.18" y2="124.46" width="0.1524" layer="91"/>
-<junction x="43.18" y="124.46"/>
+<wire x1="22.86" y1="149.86" x2="22.86" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="124.46" x2="30.48" y2="124.46" width="0.1524" layer="91"/>
+<junction x="30.48" y="124.46"/>
+<wire x1="40.64" y1="144.78" x2="40.64" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="124.46" x2="40.64" y2="124.46" width="0.1524" layer="91"/>
+<junction x="40.64" y="124.46"/>
 <pinref part="C1" gate="G$1" pin="2"/>
-<pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="53.34" y1="129.54" x2="53.34" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="124.46" x2="53.34" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="124.46" x2="53.34" y2="124.46" width="0.1524" layer="91"/>
-<junction x="53.34" y="124.46"/>
+<wire x1="50.8" y1="129.54" x2="50.8" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="124.46" x2="50.8" y2="124.46" width="0.1524" layer="91"/>
+<junction x="50.8" y="124.46"/>
 <pinref part="U$1" gate="G$1" pin="GND"/>
+<wire x1="50.8" y1="124.46" x2="60.96" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="LED4" gate="G$1" pin="C"/>
+<wire x1="60.96" y1="124.46" x2="60.96" y2="127" width="0.1524" layer="91"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+<wire x1="60.96" y1="121.92" x2="60.96" y2="124.46" width="0.1524" layer="91"/>
+<junction x="60.96" y="124.46"/>
 </segment>
 <segment>
-<pinref part="LED2" gate="G$1" pin="C"/>
+<pinref part="LED3" gate="G$1" pin="C"/>
 <pinref part="GND11" gate="1" pin="GND"/>
+<pinref part="LED2" gate="G$1" pin="C"/>
+<wire x1="25.4" y1="83.82" x2="25.4" y2="81.28" width="0.1524" layer="91"/>
+<junction x="25.4" y="81.28"/>
+<wire x1="25.4" y1="81.28" x2="35.56" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="81.28" x2="35.56" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP2" gate="G$1" pin="4"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="134.62" y1="60.96" x2="137.16" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="60.96" x2="137.16" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="50.8" x2="154.94" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="50.8" x2="154.94" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="S2" gate="1" pin="P"/>
@@ -2649,10 +2676,14 @@ I2C address: 0x5C</text>
 <net name="GPIO16" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="GPIO16"/>
-<wire x1="63.5" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
-<pinref part="R10" gate="G$1" pin="2"/>
-<wire x1="63.5" y1="104.14" x2="63.5" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="106.68" x2="96.52" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="2"/>
+<wire x1="35.56" y1="104.14" x2="35.56" y2="106.68" width="0.1524" layer="91"/>
 <label x="76.2" y="106.68" size="1.778" layer="95"/>
+<wire x1="35.56" y1="106.68" x2="25.4" y2="106.68" width="0.1524" layer="91"/>
+<junction x="35.56" y="106.68"/>
+<pinref part="R10" gate="G$1" pin="2"/>
+<wire x1="25.4" y1="106.68" x2="25.4" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GPIO14" class="0">
@@ -2680,9 +2711,9 @@ I2C address: 0x5C</text>
 <segment>
 <pinref part="IC1" gate="G$1" pin="TXD"/>
 <wire x1="172.72" y1="114.3" x2="132.08" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="114.3" x2="172.72" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="172.72" y1="63.5" x2="134.62" y2="63.5" width="0.1524" layer="91"/>
-<label x="154.94" y="63.5" size="1.778" layer="95"/>
+<wire x1="172.72" y1="114.3" x2="172.72" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="172.72" y1="53.34" x2="152.4" y2="53.34" width="0.1524" layer="91"/>
+<label x="154.94" y="53.34" size="1.778" layer="95"/>
 <label x="149.86" y="114.3" size="1.778" layer="95"/>
 <pinref part="JP2" gate="G$1" pin="3"/>
 </segment>
@@ -2691,9 +2722,9 @@ I2C address: 0x5C</text>
 <segment>
 <pinref part="IC1" gate="G$1" pin="RXD"/>
 <wire x1="170.18" y1="111.76" x2="132.08" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="66.04" x2="170.18" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="66.04" x2="170.18" y2="111.76" width="0.1524" layer="91"/>
-<label x="154.94" y="66.04" size="1.778" layer="95"/>
+<wire x1="152.4" y1="55.88" x2="170.18" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="55.88" x2="170.18" y2="111.76" width="0.1524" layer="91"/>
+<label x="154.94" y="55.88" size="1.778" layer="95"/>
 <label x="149.86" y="111.76" size="1.778" layer="95"/>
 <pinref part="JP2" gate="G$1" pin="2"/>
 </segment>
@@ -2782,16 +2813,17 @@ I2C address: 0x5C</text>
 <net name="3.3V" class="0">
 <segment>
 <pinref part="P+2" gate="G$1" pin="3.3V"/>
-<wire x1="50.8" y1="152.4" x2="53.34" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="152.4" x2="53.34" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="152.4" x2="50.8" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="152.4" x2="50.8" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="VCC"/>
 <wire x1="96.52" y1="96.52" x2="71.12" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="96.52" x2="71.12" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="53.34" y1="152.4" x2="71.12" y2="152.4" width="0.1524" layer="91"/>
-<junction x="53.34" y="152.4"/>
+<wire x1="50.8" y1="152.4" x2="60.96" y2="152.4" width="0.1524" layer="91"/>
+<junction x="50.8" y="152.4"/>
 <junction x="71.12" y="152.4"/>
 <pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="60.96" y1="152.4" x2="71.12" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="86.36" y1="139.7" x2="86.36" y2="152.4" width="0.1524" layer="91"/>
 <junction x="86.36" y="152.4"/>
 <pinref part="R1" gate="G$1" pin="2"/>
@@ -2817,7 +2849,7 @@ I2C address: 0x5C</text>
 <pinref part="IC3" gate="G$1" pin="VDD"/>
 <wire x1="208.28" y1="132.08" x2="198.12" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="198.12" y1="132.08" x2="198.12" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="53.34" y1="137.16" x2="53.34" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="50.8" y1="137.16" x2="50.8" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="U$1" gate="G$1" pin="OUT"/>
 <wire x1="144.78" y1="139.7" x2="144.78" y2="152.4" width="0.1524" layer="91"/>
 <junction x="144.78" y="152.4"/>
@@ -2826,6 +2858,9 @@ I2C address: 0x5C</text>
 <junction x="198.12" y="152.4"/>
 <pinref part="C3" gate="G$1" pin="1"/>
 <wire x1="236.22" y1="152.4" x2="236.22" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="60.96" y1="149.86" x2="60.96" y2="152.4" width="0.1524" layer="91"/>
+<junction x="60.96" y="152.4"/>
 </segment>
 <segment>
 <pinref part="IC4" gate="G$1" pin="VDD"/>
@@ -2837,8 +2872,8 @@ I2C address: 0x5C</text>
 <segment>
 <pinref part="JP2" gate="G$1" pin="1"/>
 <pinref part="P+1" gate="G$1" pin="3.3V"/>
-<wire x1="134.62" y1="68.58" x2="137.16" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="68.58" x2="137.16" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="58.42" x2="154.94" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="58.42" x2="154.94" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -2850,34 +2885,52 @@ I2C address: 0x5C</text>
 </net>
 <net name="N$11" class="0">
 <segment>
-<pinref part="R10" gate="G$1" pin="1"/>
-<pinref part="LED2" gate="G$1" pin="A"/>
-<wire x1="63.5" y1="91.44" x2="63.5" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="R7" gate="G$1" pin="1"/>
+<pinref part="LED3" gate="G$1" pin="A"/>
+<wire x1="35.56" y1="91.44" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">
 <segment>
-<wire x1="25.4" y1="152.4" x2="33.02" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="152.4" x2="30.48" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="JP1" gate="G$1" pin="2"/>
 <pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="33.02" y1="152.4" x2="35.56" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="137.16" x2="33.02" y2="152.4" width="0.1524" layer="91"/>
-<junction x="33.02" y="152.4"/>
+<wire x1="30.48" y1="152.4" x2="33.02" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="137.16" x2="30.48" y2="152.4" width="0.1524" layer="91"/>
+<junction x="30.48" y="152.4"/>
 <pinref part="U$1" gate="G$1" pin="IN"/>
+</segment>
+</net>
+<net name="N$2" class="0">
+<segment>
+<pinref part="LED4" gate="G$1" pin="A"/>
+<pinref part="R8" gate="G$1" pin="1"/>
+<wire x1="60.96" y1="134.62" x2="60.96" y2="139.7" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<pinref part="LED2" gate="G$1" pin="A"/>
+<wire x1="25.4" y1="93.98" x2="25.4" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,58.42,43.18,IC1,VCC,3.3V,,,"/>
-<approved hash="104,1,66.04,160.02,IC3,OUT,3.3V,,,"/>
-<approved hash="209,1,58.42,58.42,ADC,,,,,"/>
-<approved hash="106,1,58.42,58.42,ADC,,,,,"/>
-<approved hash="106,1,93.98,53.34,GPIO5,,,,,"/>
-<approved hash="106,1,58.42,53.34,GPIO16,,,,,"/>
-<approved hash="113,1,221.657,154.745,H2,,,,,"/>
-<approved hash="113,1,221.657,126.805,H3,,,,,"/>
+<approved hash="104,1,96.52,96.52,IC1,VCC,3.3V,,,"/>
+<approved hash="208,1,50.8,154.94,3.3V,sup,,,,"/>
+<approved hash="208,1,48.26,152.4,3.3V,out,,,,"/>
+<approved hash="208,1,208.28,88.9,3.3V,sup,,,,"/>
+<approved hash="208,1,154.94,60.96,3.3V,sup,,,,"/>
+<approved hash="209,1,96.52,111.76,ADC,,,,,"/>
+<approved hash="106,1,96.52,111.76,ADC,,,,,"/>
+<approved hash="106,1,96.52,101.6,GPIO12,,,,,"/>
+<approved hash="106,1,96.52,99.06,GPIO13,,,,,"/>
+<approved hash="106,1,96.52,104.14,GPIO14,,,,,"/>
+<approved hash="113,1,19.6427,152.69,JP1,,,,,"/>
+<approved hash="113,1,149.183,53.0504,JP2,,,,,"/>
 </errors>
 </schematic>
 </drawing>
