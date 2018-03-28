@@ -10,6 +10,10 @@ Environmental sensor for home automation systems. Includes:
  - DHT12 temperature / humidity sensor
  - MS5637-02BA0 barometric pressure sensor with temperature
 
+More information at
+
+  http://www.superhouse.tv/homesense
+
 INSTALLATION
 ------------
 The design is saved as an EAGLE project. EAGLE PCB design software is
