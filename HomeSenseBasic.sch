@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.6.0">
+<eagle version="8.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="dots" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1402,8 +1402,8 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <pin name="GPIO15" x="17.78" y="-7.62" length="middle" rot="R180"/>
 <pin name="GPIO2" x="17.78" y="-5.08" length="middle" rot="R180"/>
 <pin name="GPIO0" x="17.78" y="-2.54" length="middle" rot="R180"/>
-<pin name="GPIO5" x="17.78" y="0" length="middle" rot="R180"/>
-<pin name="GPIO4" x="17.78" y="2.54" length="middle" rot="R180"/>
+<pin name="GPIO5" x="17.78" y="2.54" length="middle" rot="R180"/>
+<pin name="GPIO4" x="17.78" y="0" length="middle" rot="R180"/>
 <pin name="RXD" x="17.78" y="5.08" length="middle" direction="in" rot="R180"/>
 <pin name="TXD" x="17.78" y="7.62" length="middle" direction="out" rot="R180"/>
 </symbol>
@@ -1562,8 +1562,8 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <connect gate="G$1" pin="GPIO15" pad="10"/>
 <connect gate="G$1" pin="GPIO16" pad="4"/>
 <connect gate="G$1" pin="GPIO2" pad="11"/>
-<connect gate="G$1" pin="GPIO4" pad="14"/>
-<connect gate="G$1" pin="GPIO5" pad="13"/>
+<connect gate="G$1" pin="GPIO4" pad="13"/>
+<connect gate="G$1" pin="GPIO5" pad="14"/>
 <connect gate="G$1" pin="RXD" pad="15"/>
 <connect gate="G$1" pin="TXD" pad="16"/>
 <connect gate="G$1" pin="VCC" pad="8"/>
@@ -1585,8 +1585,8 @@ will be further integrated into the Sparkfun Library for other footprints.  It c
 <connect gate="G$1" pin="GPIO15" pad="10"/>
 <connect gate="G$1" pin="GPIO16" pad="4"/>
 <connect gate="G$1" pin="GPIO2" pad="11"/>
-<connect gate="G$1" pin="GPIO4" pad="14"/>
-<connect gate="G$1" pin="GPIO5" pad="13"/>
+<connect gate="G$1" pin="GPIO4" pad="13"/>
+<connect gate="G$1" pin="GPIO5" pad="14"/>
 <connect gate="G$1" pin="RXD" pad="15"/>
 <connect gate="G$1" pin="TXD" pad="16"/>
 <connect gate="G$1" pin="VCC" pad="8"/>
@@ -2731,46 +2731,46 @@ Header</text>
 </net>
 <net name="SDA" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPIO4"/>
-<label x="149.86" y="109.22" size="1.778" layer="95"/>
-<wire x1="132.08" y1="109.22" x2="175.26" y2="109.22" width="0.1524" layer="91"/>
+<label x="149.86" y="106.68" size="1.778" layer="95"/>
 <pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="175.26" y1="109.22" x2="193.04" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="109.22" x2="198.12" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="129.54" x2="175.26" y2="109.22" width="0.1524" layer="91"/>
-<junction x="175.26" y="109.22"/>
-<wire x1="198.12" y1="109.22" x2="198.12" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="106.68" x2="193.04" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="106.68" x2="198.12" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="175.26" y1="129.54" x2="175.26" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="106.68" x2="198.12" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="SDA"/>
 <wire x1="198.12" y1="121.92" x2="208.28" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="IC4" gate="G$1" pin="SDA"/>
 <wire x1="223.52" y1="83.82" x2="223.52" y2="76.2" width="0.1524" layer="91"/>
 <wire x1="223.52" y1="76.2" x2="193.04" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="76.2" x2="193.04" y2="109.22" width="0.1524" layer="91"/>
-<junction x="193.04" y="109.22"/>
+<wire x1="193.04" y1="76.2" x2="193.04" y2="106.68" width="0.1524" layer="91"/>
+<junction x="193.04" y="106.68"/>
 <label x="200.66" y="121.92" size="1.778" layer="95"/>
 <label x="205.74" y="76.2" size="1.778" layer="95"/>
+<junction x="175.26" y="106.68"/>
+<pinref part="IC1" gate="G$1" pin="GPIO4"/>
+<wire x1="175.26" y1="106.68" x2="132.08" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCL" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="GPIO5"/>
-<label x="149.86" y="106.68" size="1.778" layer="95"/>
-<wire x1="132.08" y1="106.68" x2="182.88" y2="106.68" width="0.1524" layer="91"/>
+<label x="149.86" y="109.22" size="1.778" layer="95"/>
 <pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="182.88" y1="129.54" x2="182.88" y2="106.68" width="0.1524" layer="91"/>
-<junction x="182.88" y="106.68"/>
+<wire x1="182.88" y1="129.54" x2="182.88" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="SCL"/>
 <wire x1="233.68" y1="121.92" x2="236.22" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="121.92" x2="236.22" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="236.22" y1="106.68" x2="187.96" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="121.92" x2="236.22" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="109.22" x2="187.96" y2="109.22" width="0.1524" layer="91"/>
 <pinref part="IC4" gate="G$1" pin="SCL"/>
-<wire x1="187.96" y1="106.68" x2="182.88" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="187.96" y1="109.22" x2="182.88" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="83.82" x2="233.68" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="73.66" x2="187.96" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="187.96" y1="73.66" x2="187.96" y2="106.68" width="0.1524" layer="91"/>
-<junction x="187.96" y="106.68"/>
-<label x="200.66" y="106.68" size="1.778" layer="95"/>
+<wire x1="187.96" y1="73.66" x2="187.96" y2="109.22" width="0.1524" layer="91"/>
+<junction x="187.96" y="109.22"/>
+<label x="200.66" y="109.22" size="1.778" layer="95"/>
 <label x="205.74" y="73.66" size="1.778" layer="95"/>
+<junction x="182.88" y="109.22"/>
+<pinref part="IC1" gate="G$1" pin="GPIO5"/>
+<wire x1="182.88" y1="109.22" x2="132.08" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GPIO0" class="0">
