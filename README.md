@@ -1,18 +1,18 @@
 HomeSense Basic Environmental Sensor
 ====================================
-Copyright 2018 SuperHouse Pty Ltd  www.superhouse.tv  
-Designed by Jonathan Oxer
+Copyright 2018-2019 SuperHouse Pty Ltd  www.superhouse.tv  
 
 Environmental sensor for home automation systems. Includes:
 
- - ESP8266 processor with WiFi
- - Switchmode voltage regulator for wide input voltage range
- - DHT12 temperature / humidity sensor
- - MS5637-02BA0 barometric pressure sensor with temperature
+ * ESP8266 processor with WiFi
+ * Switchmode voltage regulator for wide input voltage range
+ * BME280 barometric pressure, temperature, and humidity sensor
+ * I2C breakout with prototyping area
+ * Designed to run Tasmota firmware
 
 More information at
 
-  http://www.superhouse.tv/homesense
+  http://www.superhouse.tv/hsbasic
 
 INSTALLATION
 ------------
@@ -34,3 +34,8 @@ LICENSE
 Licensed under the TAPR Open Hardware License (www.tapr.org/OHL).
 The "license" folder within this repository also contains a copy of
 this license in plain text format.
+
+
+CREDIT
+-------
+Designed by Jonathan Oxer
