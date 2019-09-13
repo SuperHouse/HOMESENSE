@@ -1078,12 +1078,8 @@ SENSOR</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="BME280" urn="urn:adsk.eagle:component:11888289/2" prefix="IC" library_version="5">
-<description>DIGITAL HUMIDITY, PRESSURE AND TEMPERATURE SENSOR&lt;br&gt;* Digital interface I²C (up to 3.4 MHz) and SPI (3 and 4 wire, up to 10 MHz)* Supply voltage VDD main supply voltage range: 1.71 V to 3.6 V*VDDIO interface voltage range: 1.2 V to 3.6 V&lt;br&gt;
-Operating range -40…+85 °C, 0…100 % rel. humidity, 300…1100 hPa
-&lt;br&gt;&lt;br&gt;
-
-The library has been designed by&lt;a href="https://www.facebook.com/groups/eaglecadsoftUK"&gt; Richard Magdycz&lt;/a&gt;</description>
+<deviceset name="BME280" urn="urn:adsk.eagle:component:11888289/3" prefix="U" library_version="11">
+<description>BME280 humdity, pressure, and temperature sensor</description>
 <gates>
 <gate name="G$1" symbol="BME280" x="0" y="0"/>
 </gates>
@@ -2425,54 +2421,6 @@ ESProg ESP8266 / ESP32 Programming Header</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="freetronics">
-<packages>
-<package name="FIDUCIAL-1.5X3">
-<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2">
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2.5">
-<circle x="0" y="0" radius="0.9" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
-</packages>
-<symbols>
-<symbol name="FIDUCIAL">
-<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
-<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="FIDUCIAL">
-<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
-Various fiducial points for machine vision alignment.</description>
-<gates>
-<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="1.5X3" package="FIDUCIAL-1.5X3">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2" package="FIDUCIAL-1X2">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2.5" package="FIDUCIAL-1X2.5">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SuperHouse-Displays" urn="urn:adsk.eagle:library:11966779">
 <packages>
 <package name="OLED-128X64-0.96" urn="urn:adsk.eagle:footprint:11966780/1" library_version="1" library_locally_modified="yes">
@@ -2586,49 +2534,49 @@ Various fiducial points for machine vision alignment.</description>
 <circle x="15.2" y="-14.25" radius="1.5" width="0.2" layer="51"/>
 <circle x="-15.2" y="-14.25" radius="1.5" width="0.2" layer="51"/>
 </package>
-<package name="OLED-128X32-0.91" urn="urn:adsk.eagle:footprint:11973683/1" library_version="9">
+<package name="OLED-128X32-0.91" urn="urn:adsk.eagle:footprint:11973683/2" library_version="10">
 <description>128x32 I2C OLED 0.91"</description>
-<wire x1="-20.58" y1="3.175" x2="-20.58" y2="4.445" width="0.2032" layer="21"/>
-<wire x1="-20.58" y1="4.445" x2="-19.945" y2="5.08" width="0.2032" layer="21"/>
-<wire x1="-18.675" y1="5.08" x2="-18.04" y2="4.445" width="0.2032" layer="21"/>
-<wire x1="-19.945" y1="0" x2="-20.58" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="-20.58" y1="0.635" x2="-20.58" y2="1.905" width="0.2032" layer="21"/>
-<wire x1="-20.58" y1="1.905" x2="-19.945" y2="2.54" width="0.2032" layer="21"/>
-<wire x1="-18.675" y1="2.54" x2="-18.04" y2="1.905" width="0.2032" layer="21"/>
-<wire x1="-18.04" y1="1.905" x2="-18.04" y2="0.635" width="0.2032" layer="21"/>
-<wire x1="-18.04" y1="0.635" x2="-18.675" y2="0" width="0.2032" layer="21"/>
-<wire x1="-20.58" y1="3.175" x2="-19.945" y2="2.54" width="0.2032" layer="21"/>
-<wire x1="-18.675" y1="2.54" x2="-18.04" y2="3.175" width="0.2032" layer="21"/>
-<wire x1="-18.04" y1="4.445" x2="-18.04" y2="3.175" width="0.2032" layer="21"/>
-<wire x1="-20.58" y1="-4.445" x2="-20.58" y2="-3.175" width="0.2032" layer="21"/>
-<wire x1="-20.58" y1="-3.175" x2="-19.945" y2="-2.54" width="0.2032" layer="21"/>
-<wire x1="-18.675" y1="-2.54" x2="-18.04" y2="-3.175" width="0.2032" layer="21"/>
-<wire x1="-19.945" y1="-2.54" x2="-20.58" y2="-1.905" width="0.2032" layer="21"/>
-<wire x1="-20.58" y1="-1.905" x2="-20.58" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="-20.58" y1="-0.635" x2="-19.945" y2="0" width="0.2032" layer="21"/>
-<wire x1="-18.675" y1="0" x2="-18.04" y2="-0.635" width="0.2032" layer="21"/>
-<wire x1="-18.04" y1="-0.635" x2="-18.04" y2="-1.905" width="0.2032" layer="21"/>
-<wire x1="-18.04" y1="-1.905" x2="-18.675" y2="-2.54" width="0.2032" layer="21"/>
-<wire x1="-19.945" y1="-5.08" x2="-18.675" y2="-5.08" width="0.2032" layer="21"/>
-<wire x1="-20.58" y1="-4.445" x2="-19.945" y2="-5.08" width="0.2032" layer="21"/>
-<wire x1="-18.675" y1="-5.08" x2="-18.04" y2="-4.445" width="0.2032" layer="21"/>
-<wire x1="-18.04" y1="-3.175" x2="-18.04" y2="-4.445" width="0.2032" layer="21"/>
-<wire x1="-19.945" y1="5.08" x2="-18.675" y2="5.08" width="0.2032" layer="21"/>
-<wire x1="-21.5" y1="-6" x2="-21.5" y2="6" width="0.127" layer="51"/>
-<wire x1="-21.5" y1="6" x2="16.5" y2="6" width="0.127" layer="51"/>
-<wire x1="16.5" y1="6" x2="16.5" y2="-6" width="0.127" layer="51"/>
-<wire x1="16.5" y1="-6" x2="-21.5" y2="-6" width="0.127" layer="51"/>
-<pad name="GND" x="-19.31" y="-3.81" drill="1.016" diameter="1.8796" shape="square" rot="R180"/>
-<pad name="VCC" x="-19.31" y="-1.27" drill="1.016" diameter="1.8796" rot="R180"/>
-<pad name="SCL" x="-19.31" y="1.27" drill="1.016" diameter="1.8796" rot="R180"/>
-<pad name="SDA" x="-19.31" y="3.81" drill="1.016" diameter="1.8796" rot="R180"/>
-<text x="-17.2962" y="-7.3612" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<wire x1="-19.58" y1="3.175" x2="-19.58" y2="4.445" width="0.2032" layer="21"/>
+<wire x1="-19.58" y1="4.445" x2="-18.945" y2="5.08" width="0.2032" layer="21"/>
+<wire x1="-17.675" y1="5.08" x2="-17.04" y2="4.445" width="0.2032" layer="21"/>
+<wire x1="-18.945" y1="0" x2="-19.58" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-19.58" y1="0.635" x2="-19.58" y2="1.905" width="0.2032" layer="21"/>
+<wire x1="-19.58" y1="1.905" x2="-18.945" y2="2.54" width="0.2032" layer="21"/>
+<wire x1="-17.675" y1="2.54" x2="-17.04" y2="1.905" width="0.2032" layer="21"/>
+<wire x1="-17.04" y1="1.905" x2="-17.04" y2="0.635" width="0.2032" layer="21"/>
+<wire x1="-17.04" y1="0.635" x2="-17.675" y2="0" width="0.2032" layer="21"/>
+<wire x1="-19.58" y1="3.175" x2="-18.945" y2="2.54" width="0.2032" layer="21"/>
+<wire x1="-17.675" y1="2.54" x2="-17.04" y2="3.175" width="0.2032" layer="21"/>
+<wire x1="-17.04" y1="4.445" x2="-17.04" y2="3.175" width="0.2032" layer="21"/>
+<wire x1="-19.58" y1="-4.445" x2="-19.58" y2="-3.175" width="0.2032" layer="21"/>
+<wire x1="-19.58" y1="-3.175" x2="-18.945" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="-17.675" y1="-2.54" x2="-17.04" y2="-3.175" width="0.2032" layer="21"/>
+<wire x1="-18.945" y1="-2.54" x2="-19.58" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="-19.58" y1="-1.905" x2="-19.58" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-19.58" y1="-0.635" x2="-18.945" y2="0" width="0.2032" layer="21"/>
+<wire x1="-17.675" y1="0" x2="-17.04" y2="-0.635" width="0.2032" layer="21"/>
+<wire x1="-17.04" y1="-0.635" x2="-17.04" y2="-1.905" width="0.2032" layer="21"/>
+<wire x1="-17.04" y1="-1.905" x2="-17.675" y2="-2.54" width="0.2032" layer="21"/>
+<wire x1="-18.945" y1="-5.08" x2="-17.675" y2="-5.08" width="0.2032" layer="21"/>
+<wire x1="-19.58" y1="-4.445" x2="-18.945" y2="-5.08" width="0.2032" layer="21"/>
+<wire x1="-17.675" y1="-5.08" x2="-17.04" y2="-4.445" width="0.2032" layer="21"/>
+<wire x1="-17.04" y1="-3.175" x2="-17.04" y2="-4.445" width="0.2032" layer="21"/>
+<wire x1="-18.945" y1="5.08" x2="-17.675" y2="5.08" width="0.2032" layer="21"/>
+<wire x1="-20.5" y1="-6" x2="-20.5" y2="6" width="0.127" layer="51"/>
+<wire x1="-20.5" y1="6" x2="17.5" y2="6" width="0.127" layer="51"/>
+<wire x1="17.5" y1="6" x2="17.5" y2="-6" width="0.127" layer="51"/>
+<wire x1="17.5" y1="-6" x2="-20.5" y2="-6" width="0.127" layer="51"/>
+<pad name="GND" x="-18.31" y="-3.81" drill="1.016" diameter="1.8796" shape="square" rot="R180"/>
+<pad name="VCC" x="-18.31" y="-1.27" drill="1.016" diameter="1.8796" rot="R180"/>
+<pad name="SCL" x="-18.31" y="1.27" drill="1.016" diameter="1.8796" rot="R180"/>
+<pad name="SDA" x="-18.31" y="3.81" drill="1.016" diameter="1.8796" rot="R180"/>
+<text x="-16.2962" y="-7.3612" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-17.22" y="6.675" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-19.564" y1="3.556" x2="-19.056" y2="4.064" layer="51" rot="R90"/>
-<rectangle x1="-19.564" y1="1.016" x2="-19.056" y2="1.524" layer="51" rot="R90"/>
-<rectangle x1="-19.564" y1="-1.524" x2="-19.056" y2="-1.016" layer="51" rot="R90"/>
-<rectangle x1="-19.564" y1="-4.064" x2="-19.056" y2="-3.556" layer="51" rot="R90"/>
-<rectangle x1="-17" y1="-5" x2="16" y2="5" layer="51"/>
+<rectangle x1="-18.564" y1="3.556" x2="-18.056" y2="4.064" layer="51" rot="R90"/>
+<rectangle x1="-18.564" y1="1.016" x2="-18.056" y2="1.524" layer="51" rot="R90"/>
+<rectangle x1="-18.564" y1="-1.524" x2="-18.056" y2="-1.016" layer="51" rot="R90"/>
+<rectangle x1="-18.564" y1="-4.064" x2="-18.056" y2="-3.556" layer="51" rot="R90"/>
+<rectangle x1="-16" y1="-5" x2="17" y2="5" layer="51"/>
 </package>
 <package name="OLED-128X64-1.3-HO" urn="urn:adsk.eagle:footprint:12058300/1" library_version="1" library_locally_modified="yes">
 <description>OLED module 1.3", header only</description>
@@ -2699,7 +2647,7 @@ Various fiducial points for machine vision alignment.</description>
 <packageinstance name="OLED-128X64-1.3"/>
 </packageinstances>
 </package3d>
-<package3d name="OLED-128X32-0.91" urn="urn:adsk.eagle:package:11973684/2" type="model" library_version="9">
+<package3d name="OLED-128X32-0.91" urn="urn:adsk.eagle:package:11973684/4" type="model" library_version="11">
 <description>128x32 I2C OLED 0.91"</description>
 <packageinstances>
 <packageinstance name="OLED-128X32-0.91"/>
@@ -2728,7 +2676,7 @@ Various fiducial points for machine vision alignment.</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="OLED-I2C" urn="urn:adsk.eagle:component:11966783/7" prefix="MOD" library_version="1" library_locally_modified="yes">
+<deviceset name="OLED-I2C" urn="urn:adsk.eagle:component:11966783/9" prefix="MOD" library_version="1" library_locally_modified="yes">
 <description>OLED module with SSD1306 I2C driver</description>
 <gates>
 <gate name="G$1" symbol="OLED-I2C" x="0" y="0"/>
@@ -2770,7 +2718,7 @@ Various fiducial points for machine vision alignment.</description>
 <connect gate="G$1" pin="VCC" pad="VCC"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:11973684/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:11973684/4"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2785,6 +2733,80 @@ Various fiducial points for machine vision alignment.</description>
 </connects>
 <package3dinstances>
 <package3dinstance package3d_urn="urn:adsk.eagle:package:12058301/2"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="SuperHouse-Symbols" urn="urn:adsk.eagle:library:13228893">
+<packages>
+<package name="FIDUCIAL-1X2.5" urn="urn:adsk.eagle:footprint:13228894/1" library_version="1">
+<circle x="0" y="0" radius="0.9" width="1.27" layer="29"/>
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-1.5X3" urn="urn:adsk.eagle:footprint:13228896/1" library_version="1">
+<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
+<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-1X2" urn="urn:adsk.eagle:footprint:13228895/1" library_version="1">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="FIDUCIAL-1X2.5" urn="urn:adsk.eagle:package:13228898/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="FIDUCIAL-1X2.5"/>
+</packageinstances>
+</package3d>
+<package3d name="FIDUCIAL-1.5X3" urn="urn:adsk.eagle:package:13228900/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="FIDUCIAL-1.5X3"/>
+</packageinstances>
+</package3d>
+<package3d name="FIDUCIAL-1X2" urn="urn:adsk.eagle:package:13228899/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="FIDUCIAL-1X2"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="FIDUCIAL" urn="urn:adsk.eagle:symbol:13228897/1" library_version="1">
+<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="FIDUCIAL" urn="urn:adsk.eagle:component:13228901/1" library_version="1">
+<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
+Various fiducial points for machine vision alignment.</description>
+<gates>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1.5X3" package="FIDUCIAL-1.5X3">
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:13228900/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2" package="FIDUCIAL-1X2">
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:13228899/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2.5" package="FIDUCIAL-1X2.5">
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:13228898/1"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -2837,9 +2859,9 @@ Various fiducial points for machine vision alignment.</description>
 <part name="J1" library="SuperHouse-Connectors" library_urn="urn:adsk.eagle:library:11765989" deviceset="ESPROG" device="-SOCKET" package3d_urn="urn:adsk.eagle:package:12469082/2"/>
 <part name="GND1" library="SuperHouse-SupplySymbols" library_urn="urn:adsk.eagle:library:11790503" deviceset="GND" device=""/>
 <part name="P+1" library="SuperHouse-SupplySymbols" library_urn="urn:adsk.eagle:library:11790503" deviceset="3.3V" device=""/>
-<part name="FID2" library="freetronics" deviceset="FIDUCIAL" device="1X2.5"/>
-<part name="FID3" library="freetronics" deviceset="FIDUCIAL" device="1X2.5"/>
-<part name="MOD1" library="SuperHouse-Displays" library_urn="urn:adsk.eagle:library:11966779" deviceset="OLED-I2C" device="128X32-0.91" package3d_urn="urn:adsk.eagle:package:11973684/2"/>
+<part name="FID2" library="SuperHouse-Symbols" library_urn="urn:adsk.eagle:library:13228893" deviceset="FIDUCIAL" device="1X2.5" package3d_urn="urn:adsk.eagle:package:13228898/1"/>
+<part name="FID3" library="SuperHouse-Symbols" library_urn="urn:adsk.eagle:library:13228893" deviceset="FIDUCIAL" device="1X2.5" package3d_urn="urn:adsk.eagle:package:13228898/1"/>
+<part name="MOD1" library="SuperHouse-Displays" library_urn="urn:adsk.eagle:library:11966779" deviceset="OLED-I2C" device="128X32-0.91" package3d_urn="urn:adsk.eagle:package:11973684/4"/>
 <part name="P+4" library="SuperHouse-SupplySymbols" library_urn="urn:adsk.eagle:library:11790503" deviceset="3.3V" device=""/>
 <part name="GND5" library="SuperHouse-SupplySymbols" library_urn="urn:adsk.eagle:library:11790503" deviceset="GND" device=""/>
 </parts>
@@ -3400,19 +3422,19 @@ Header</text>
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,96.52,91.44,IC1,VCC,3.3V,,,"/>
-<approved hash="104,1,198.12,132.08,IC2,VDD,3.3V,,,"/>
-<approved hash="104,1,223.52,129.54,IC2,VDDIO,3.3V,,,"/>
-<approved hash="208,1,50.8,149.86,3.3V,sup,,,,"/>
-<approved hash="208,1,48.26,147.32,3.3V,out,,,,"/>
-<approved hash="208,1,190.5,55.88,3.3V,sup,,,,"/>
-<approved hash="208,1,63.5,53.34,3.3V,sup,,,,"/>
-<approved hash="209,1,96.52,106.68,ADC,,,,,"/>
-<approved hash="106,1,96.52,106.68,ADC,,,,,"/>
-<approved hash="106,1,96.52,96.52,GPIO12,,,,,"/>
-<approved hash="106,1,96.52,93.98,GPIO13,,,,,"/>
-<approved hash="106,1,96.52,99.06,GPIO14,,,,,"/>
-<approved hash="106,1,96.52,101.6,GPIO16,,,,,"/>
+<approved hash="104,1,96.52,93.98,IC1,VCC,3.3V,,,"/>
+<approved hash="104,1,198.12,134.62,IC2,VDD,3.3V,,,"/>
+<approved hash="104,1,223.52,132.08,IC2,VDDIO,3.3V,,,"/>
+<approved hash="208,1,50.8,152.4,3.3V,sup,,,,"/>
+<approved hash="208,1,48.26,149.86,3.3V,out,,,,"/>
+<approved hash="208,1,215.9,50.8,3.3V,sup,,,,"/>
+<approved hash="208,1,190.5,48.26,3.3V,sup,,,,"/>
+<approved hash="209,1,96.52,109.22,ADC,,,,,"/>
+<approved hash="106,1,96.52,109.22,ADC,,,,,"/>
+<approved hash="106,1,96.52,99.06,GPIO12,,,,,"/>
+<approved hash="106,1,96.52,96.52,GPIO13,,,,,"/>
+<approved hash="106,1,96.52,101.6,GPIO14,,,,,"/>
+<approved hash="106,1,96.52,104.14,GPIO16,,,,,"/>
 </errors>
 </schematic>
 </drawing>
